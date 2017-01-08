@@ -48,13 +48,22 @@ Reaproveitar blocos HTML:
 	
 	
 	
+======================================== AULA 03
+Views parciais:
+	Casos que queremos importar uma view sem executar nenhuma lógica de negócios. São arquivos cshtml comuns que devem ficar dentro da pasta ~/Views/Shared e seu nome deve iniciar com _
+	Para importar a view parcial em outro arquivo, utiliza o helper:
+		@Html.Partial("_MenuSuperior")
 	
 	
+Seções do Razor:
+	Quando precisamos utilizar um script em uma View e queremos renderizalos no final do body, podemos criar uma seção para todos os scripts no Layout:
+		@RenderSection("Scripts")
+	O que a view definir dentro da seção Scripts será colocado no lugar do @RenderSection.
+	Com esse código estamos definindo uma seção obrigatória chamada Scripts, porém nem toda view precisa importar scripts adicionais:
+		@RenderSection("Scripts", required: false)
 	
-	
-	
-	
-	
+	Agora basta definir na view em questão quais os scripts que ela utilizará:
+	@section Scripts {	}
 	
 	
 	
