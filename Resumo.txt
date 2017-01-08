@@ -1,0 +1,76 @@
+======================================== AULA 01
+Iterar em uma lista:
+	@foreach
+ 
+Condição
+	@if(condição) {}
+	else {}
+ 
+Comentários:
+	Iniciados com @*
+	Terminados com *@
+ 
+ 
+Links:
+	Colocar link diretamente na view não é uma boa prática, é melhor deixar o próprio Asp.Net MVC gerar o link.
+		@Html.ActionLink("Texto do Link", "Action", "Controller")
+
+	O helper Html.ActionLink fornece vários métodos para criar links:
+		@Html.ActionLink("Texto do Link", "Action", "Controller", new { Parâmetros de rotas }, new { Atributos HTML })
+	
+	
+Sessão do servidor:
+	Fazemos isso através da variável @Session que é disponibilizada automaticamente na view.
+		@Session["usuarioLogado"]
+		@if(Session["usuarioLogado"] != null) 
+		
+
+Texto solto dentro de um bloco Razor
+	Quando estamos dentro de um bloco Razor, esperasse código C# ou texto dentro de tags html, mas caso precise adicionar um texto basta usar @:
+		@: Bem-Vindo
+		
+		
+		
+======================================== AULA 02
+Layout Page:
+	Para definirmos um layout comum para a aplicação, basta adicionar um novo arquivo na pasta ~/Views/Shared chamado _Layout.cshtml.
+	Marcamos o lugar em que queremos colocar o código da view do controller com a função @RenderBody
+	
+	
+Valores globais para views:
+	Podemos criar um arquivo especial dentro do projeto chamado _ViewStart.cshtml dentro da pasta Views
+	
+	
+Reaproveitar blocos HTML:
+	Para que certas variáveis não precise ser processada em todas as vies/controller, por exemplo um Menu, poderia criar uma controller/view pra isso e reaproveitar o código HTML gerado.
+		 @Html.Action("Index", "Menu")
+	Neste caso é necessário setar a variável Layout como NULL na view.
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
