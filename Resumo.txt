@@ -67,18 +67,32 @@ Seções do Razor:
 	
 	
 	
+======================================== AULA 04	
+Views Fortemente Tipadas:
+	Quando trabalhamos com formulários é recomendado que os campos do formulário conheçam os atributos do Modelo, para isso definimos uma view tipada:
+		@model LojaRazor.Models.Usuario
 	
 	
+Iniciar Forms:	
+	Começar um novo formulário com o HtmlHelper:
+		@Html.BeginForm("Nome da Action", "Controller", FormMethod.Post)
+	
+	Para o Razor saber onde o código do formulário termina, utilizamos o bloco @using:
+		@using(Html.BeginForm("Cadastra", "Usuarios", FormMethod.Post))
+		{
+		   @* código do formulário fica aqui *@
+		}
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
+Gerar Campos:
+	O helper passa um lambda que recebe um argumento do tipo Usuario (tipo da view) e devolve qual é a propriedade que queremos utilizar:
+		Label: @Html.LabelFor(u => u.Complemento, "Texto Label")
+		TextBox: @Html.TextBoxFor(u => u.Nome)
+		TextArea: @Html.TextAreaFor(u => u.Observacoes)
+		Password: @Html.PasswordFor(u => u.Senha)
+		CheckBox: @Html.CheckBoxFor(u => u.RecebePromocoes)
+		RadioButton: @Html.RadioButtonFor(u => u.Sexo, LojaRazor.Models.Sexo.Masculino)
+		DropDown: @Html.DropDownListFor(u => u.Estado, lista_de_estados)
 	
 	
 	
