@@ -96,4 +96,42 @@ Gerar Campos:
 	
 	
 	
+======================================== AULA 05	
+	Internacionalização com arquivos de recurso do C# (Resource File):
+		O resource file funciona como um dicionário que associa chaves a valores.
+		Precisamos modificar a opção Access Modifier do editor de resursos de Internal para Public
+		
+		Quando queremos que a aplicação suporte diversos idiomas diferentes:
+			Mensagens.<código do idioma>.resx
+			Mensagens.en-us.resx
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
