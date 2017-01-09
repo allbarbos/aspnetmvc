@@ -97,41 +97,34 @@ Gerar Campos:
 	
 	
 ======================================== AULA 05	
-	Internacionalização com arquivos de recurso do C# (Resource File):
-		O resource file funciona como um dicionário que associa chaves a valores.
-		Precisamos modificar a opção Access Modifier do editor de resursos de Internal para Public
+Internacionalização com arquivos de recurso do C# (Resource File):
+	O resource file funciona como um dicionário que associa chaves a valores.
+	Precisamos modificar a opção Access Modifier do editor de resursos de Internal para Public
+	
+	Quando queremos que a aplicação suporte diversos idiomas diferentes:
+		Mensagens.<código do idioma>.resx
+		Mensagens.en-us.resx
+	
+	
+	
+======================================== AULA 06	
+Utilizando Bundling para melhorar o carregamento de recursos:
+	Para utilizarmos a API de bundling, precisamos configurar o projeto dentro do arquivo App_Start/BundleConfig.cs
+	Registrar um conjunto de arquivos css:
+		Por convenção, a url é iniciada pelo prefixo ~/bundles/ seguido pelo nome desejado pela aplicação para os estilos da aplicação, utilizaríamos ~/bundles/estilos, por exemplo.		
+			StyleBundle estilos = new StyleBundle("~/bundles/estilos");
+			estilos.Include("~/Content/bootstrap/css/bootstrap.css");
+			bundles.Add(estilos);
 		
-		Quando queremos que a aplicação suporte diversos idiomas diferentes:
-			Mensagens.<código do idioma>.resx
-			Mensagens.en-us.resx
+		Para importar na View:
+			@Styles.Render("~/bundles/estilos")
 	
+	Registrar um conjunto de arquivos js:
+		ScriptBundle scripts = new ScriptBundle("~/bundles/scripts");
+		scripts.Include("~/Scripts/jquery-1.7.1.js");
+		bundles.Add(scripts);
 	
+		Para importar na View:
+			@Scripts.Render("~/bundles/scripts")
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	Para ver funcionando, acesso o Web.Config, tag Compilation. No atributo debug para false, colocando a aplicação em modo release.
