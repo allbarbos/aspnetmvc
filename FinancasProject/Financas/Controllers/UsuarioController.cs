@@ -1,6 +1,10 @@
 ﻿using Financas.DAO;
 using Financas.Entidades;
 using Financas.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 using WebMatrix.WebData;
@@ -19,6 +23,11 @@ namespace Financas.Controllers
         public ActionResult Form()
         {
             return View();
+        }
+
+        public ActionResult Index()
+        {
+            return View(usuarioDAO.Lista());
         }
 
         public ActionResult Adiciona(UsuarioModel model)
@@ -52,11 +61,6 @@ namespace Financas.Controllers
             {
                 return View("Form", model);
             }
-        }
-
-        public ActionResult Index()
-        {
-            return View(usuarioDAO.Lista());
         }
     }
 }

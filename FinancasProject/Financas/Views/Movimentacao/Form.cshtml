@@ -1,4 +1,9 @@
-﻿@model Financas.Entidades.Movimentacao
+﻿
+@{
+    ViewBag.Title = "Form";
+}
+
+@model Financas.Entidades.Movimentacao
 
 @using (Html.BeginForm("Adiciona", "Movimentacao", FormMethod.Post))
 {
@@ -22,3 +27,4 @@
 
     <input type="submit" value="Cadastrar" />
 }
+

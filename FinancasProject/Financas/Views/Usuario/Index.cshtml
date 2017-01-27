@@ -1,4 +1,9 @@
-﻿@model IList<Financas.Entidades.Usuario>
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@model IList<Financas.Entidades.Usuario>
 
 @Html.ActionLink("Novo usuário", "Form")
 
@@ -14,10 +19,11 @@
         @foreach (var u in Model)
         {
             <tr>
-                <td>@u.ID</td>
+                <td>@u.Id</td>
                 <td>@u.Nome</td>
                 <td>@u.Email</td>
             </tr>
         }
     </tbody>
 </table>
+

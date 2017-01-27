@@ -7,7 +7,7 @@ namespace Financas.Entidades
 {
     public class Movimentacao
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
 
         public decimal Valor { get; set; }
 
@@ -19,4 +19,5 @@ namespace Financas.Entidades
 
         public virtual Usuario Usuario { get; set; }
     }
+
 }
