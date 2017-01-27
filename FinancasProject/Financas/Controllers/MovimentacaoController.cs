@@ -1,11 +1,11 @@
 ﻿using Financas.DAO;
 using Financas.Entidades;
-using System.Collections;
 using System.Collections.Generic;
 using System.Web.Mvc;
 
 namespace Financas.Controllers
 {
+    [Authorize]
     public class MovimentacaoController : Controller
     {
         private MovimentacaoDAO movDAO;
