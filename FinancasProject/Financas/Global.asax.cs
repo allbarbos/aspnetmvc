@@ -12,7 +12,7 @@ namespace Financas
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
             //Inicialização do Simple MemberShip
-            WebSecurity.InitializeDatabaseConnection("FinancasContext", "Usuarios", "ID", "Nome", true);
+            WebSecurity.InitializeDatabaseConnection("FinancasContext", "Usuarios", "ID", "Email", true);
         }
     }
 }

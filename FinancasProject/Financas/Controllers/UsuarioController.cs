@@ -47,7 +47,7 @@ namespace Financas.Controllers
 
                     //Cria user e Conta (Evitando o caso acima em que pode ser adicionado e depois visto que já existia o usuario no Simple Membership
                     //Argumentos: Login, Senha, Objeto Anônimo (Com as infos que serão adicionadas na tabela)
-                    WebSecurity.CreateUserAndAccount(model.Nome, model.Senha, new { Email = model.Email });
+                    WebSecurity.CreateUserAndAccount(model.Email, model.Senha, new { Nome = model.Nome });
 
                     return RedirectToAction("Index");
                 }
