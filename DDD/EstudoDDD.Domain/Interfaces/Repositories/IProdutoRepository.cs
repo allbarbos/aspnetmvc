@@ -1,7 +1,7 @@
 ﻿using EstudoDDD.Domain.Entities;
 using System.Collections.Generic;
 
-namespace EstudoDDD.Domain.Interfaces
+namespace EstudoDDD.Domain.Interfaces.Repositories
 {
     public interface IProdutoRepository :IRepositoryBase<Produto>
     {

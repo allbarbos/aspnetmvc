@@ -1,10 +1,5 @@
 ﻿using EstudoDDD.Domain.Entities;
-using EstudoDDD.Domain.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using EstudoDDD.Domain.Interfaces.Repositories;
 
 namespace EstudoDDD.Infra.Data.Repositories
 {

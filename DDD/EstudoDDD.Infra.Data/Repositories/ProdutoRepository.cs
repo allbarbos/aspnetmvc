@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using EstudoDDD.Domain.Entities;
-using EstudoDDD.Domain.Interfaces;
+﻿using EstudoDDD.Domain.Entities;
+using EstudoDDD.Domain.Interfaces.Repositories;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace EstudoDDD.Infra.Data.Repositories

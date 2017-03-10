@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace EstudoDDD.Domain.Interfaces
+namespace EstudoDDD.Domain.Interfaces.Repositories
 {
     public interface IRepositoryBase<TEntity> where TEntity : class
     {

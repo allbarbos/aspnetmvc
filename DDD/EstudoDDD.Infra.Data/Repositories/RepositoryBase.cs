@@ -1,4 +1,4 @@
-﻿using EstudoDDD.Domain.Interfaces;
+﻿using EstudoDDD.Domain.Interfaces.Repositories;
 using EstudoDDD.Infra.Data.Contexto;
 using System;
 using System.Collections.Generic;
