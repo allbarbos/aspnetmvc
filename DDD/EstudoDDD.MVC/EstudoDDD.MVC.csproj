@@ -127,6 +127,7 @@
     <Compile Include="AutoMapper\AutoMapperConfig.cs" />
     <Compile Include="AutoMapper\DomainToViewModelMappingProfile.cs" />
     <Compile Include="AutoMapper\ViewModelToDomainMappingProfile.cs" />
+    <Compile Include="Controllers\ClientesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -174,11 +175,17 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Clientes\Index.cshtml" />
+    <Content Include="Views\Clientes\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EstudoDDD.Domain\EstudoDDD.Domain.csproj">
       <Project>{d9abfe45-3adb-4e42-a5f0-5ef59293788e}</Project>
       <Name>EstudoDDD.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EstudoDDD.Infra.Data\EstudoDDD.Infra.Data.csproj">
+      <Project>{3143A405-361E-4608-9004-6A50BD855D2A}</Project>
+      <Name>EstudoDDD.Infra.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -188,6 +195,7 @@
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
