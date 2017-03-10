@@ -1,9 +1,9 @@
 ﻿using EstudoDDD.Domain.Entities;
 using System.Collections.Generic;
 
-namespace EstudoDDD.Domain.Interfaces.Services
+namespace EstudoDDD.Application.Interface
 {
-    public interface IProdutoService : IServiceBase<Produto>
+    public interface IProdutoAppService : IAppServiceBase<Produto>
     {
         IEnumerable<Produto> BuscarPorNome(string nome);
     }
