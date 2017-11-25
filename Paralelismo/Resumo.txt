@@ -1,0 +1,9 @@
+Thread
+  thread.Start()
+    Inicia uma thread
+  
+  Thread.Sleep(250);
+    É um método que, literalmente, coloca a Thread para dormir. Ela recebe por parâmetro um número inteiro que representa o número de milisegundos durante os quais a Thread ficará sem fazer nada
+  
+  IsAlive
+    Retorna "verdadeiro" quando a thread está em execução e "falso" ao fim de seu processamento.
