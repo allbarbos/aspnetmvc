@@ -7,3 +7,16 @@ Thread
   
   IsAlive
     Retorna "verdadeiro" quando a thread está em execução e "falso" ao fim de seu processamento.
+
+Task
+  Task.Factory.StartNew
+    Constrói uma tarefa por com uma expressão lambda
+
+  TaskScheduler
+    Define quando uma tarefa será executada ou não, em que lugar isto ocorrerá, tentando sempre otimizar ao máximo a execução da aplicação. Quando usamos a Factory, utilizamos o TaskScheduler default que o .NET nos fornece.
+
+  Task.WaitAll()
+     Não faz nada até que todas as outras tarefas sejam finalizadas
+
+  Task.WhenAll(listaDeTarefas)
+    Consiste em retornar uma tarefa que espera o término de todas as demais recebidas por parâmetro e ainda permite encadear outras tarefas com o método ContinueWith
