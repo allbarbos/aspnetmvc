@@ -19,4 +19,5 @@ Task
      Não faz nada até que todas as outras tarefas sejam finalizadas
 
   Task.WhenAll(listaDeTarefas)
-    Consiste em retornar uma tarefa que espera o término de todas as demais recebidas por parâmetro e ainda permite encadear outras tarefas com o método ContinueWith
+    Consiste em retornar uma tarefa que espera o término de todas as demais recebidas por parâmetro e ainda permite encadear outras tarefas com o método ContinueWith.
+    OBS.: Uma thread diferente não pode acessar o controle da interface gráfica. Sendo assim precisamos obter a thread principal com o método TaskScheduler.FromCurrentSynchronizationContext() e enviar como callback no ContinueWith
