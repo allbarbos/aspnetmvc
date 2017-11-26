@@ -39,13 +39,27 @@ namespace ByteBank.View
 
       var contas = r_Repositorio.GetContaClientes();
 
-      var resultado = new List<string>();
-
       AtualizarView(new List<string>(), TimeSpan.Zero);
 
       var inicio = DateTime.Now;
 
-      var contasTarefas = contas.Select(conta =>
+      ConsolidaContas(contas)
+        .ContinueWith(task =>
+        {
+          var fim = DateTime.Now;
+          var resultado = task.Result;
+
+          AtualizarView(resultado, fim - inicio);
+
+          BtnProcessar.IsEnabled = true;
+        }, taskSchedulerUI);
+    }
+
+    private Task<List<string>> ConsolidaContas(IEnumerable<ContaCliente> contas)
+    {
+      var resultado = new List<string>();
+
+      var tarefas = contas.Select(conta =>
       {
         return Task.Factory.StartNew(() =>
         {
@@ -54,19 +68,10 @@ namespace ByteBank.View
         });
       }).ToArray();
 
-      Task.WhenAll(contasTarefas)
-                 .ContinueWith(task =>
-                 {
-                   var fim = DateTime.Now;
-                   AtualizarView(resultado, fim - inicio);
-                 }, taskSchedulerUI)
-                 .ContinueWith(task =>
-                 {
-                   BtnProcessar.IsEnabled = true;
-                 }, taskSchedulerUI);
+      return Task.WhenAll(tarefas).ContinueWith(t => resultado);
     }
 
-    private void AtualizarView(List<String> result, TimeSpan elapsedTime)
+    private void AtualizarView(List<string> result, TimeSpan elapsedTime)
     {
       var tempoDecorrido = $"{ elapsedTime.Seconds }.{ elapsedTime.Milliseconds} segundos!";
       var mensagem = $"Processamento de {result.Count} clientes em {tempoDecorrido}";
