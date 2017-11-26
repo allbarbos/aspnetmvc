@@ -32,9 +32,8 @@ namespace ByteBank.View
       r_Servico = new ContaClienteService();
     }
 
-    private void BtnProcessar_Click(object sender, RoutedEventArgs e)
+    private async void BtnProcessar_Click(object sender, RoutedEventArgs e)
     {
-      var taskSchedulerUI = TaskScheduler.FromCurrentSynchronizationContext();
       BtnProcessar.IsEnabled = false;
 
       var contas = r_Repositorio.GetContaClientes();
@@ -43,38 +42,27 @@ namespace ByteBank.View
 
       var inicio = DateTime.Now;
 
-      ConsolidaContas(contas)
-        .ContinueWith(task =>
-        {
-          var fim = DateTime.Now;
-          var resultado = task.Result;
+      var resultado = await ConsolidaContas(contas);
 
-          AtualizarView(resultado, fim - inicio);
+      var fim = DateTime.Now;
 
-          BtnProcessar.IsEnabled = true;
-        }, taskSchedulerUI);
+      AtualizarView(resultado, fim - inicio);
+      BtnProcessar.IsEnabled = true;
     }
 
-    private Task<List<string>> ConsolidaContas(IEnumerable<ContaCliente> contas)
+    private async Task<string[]> ConsolidaContas(IEnumerable<ContaCliente> contas)
     {
-      var resultado = new List<string>();
+      var tarefas = contas.Select(conta => 
+        Task.Factory.StartNew(() => r_Servico.ConsolidarMovimentacao(conta))
+      );
 
-      var tarefas = contas.Select(conta =>
-      {
-        return Task.Factory.StartNew(() =>
-        {
-          var resultadoConta = r_Servico.ConsolidarMovimentacao(conta);
-          resultado.Add(resultadoConta);
-        });
-      }).ToArray();
-
-      return Task.WhenAll(tarefas).ContinueWith(t => resultado);
+      return await Task.WhenAll(tarefas);
     }
 
-    private void AtualizarView(List<string> result, TimeSpan elapsedTime)
+    private void AtualizarView(IEnumerable<string> result, TimeSpan elapsedTime)
     {
       var tempoDecorrido = $"{ elapsedTime.Seconds }.{ elapsedTime.Milliseconds} segundos!";
-      var mensagem = $"Processamento de {result.Count} clientes em {tempoDecorrido}";
+      var mensagem = $"Processamento de {result.Count()} clientes em {tempoDecorrido}";
 
       LstResultados.ItemsSource = result;
       TxtTempo.Text = mensagem;
