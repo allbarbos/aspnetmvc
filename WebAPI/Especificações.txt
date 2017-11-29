@@ -1,0 +1,11 @@
+﻿
+A seguinte regra de negócio será utilizada:
+“O RH necessita de uma aplicação para traçar as tecnologias que os candidatos conhecem.
+Como cadastros base, será informado ao sistema quais tecnologias a empresa trabalha, e quais vagas estão disponíveis.
+Durante a entrevista, candidato será cadastrado a uma vaga e vinculado às tecnologias que conhece.
+Ao final do período de triagem de currículos, o RH informará o peso de cada tecnologia para a vaga em questão,
+recebendo com isso, um relatório ordenado por candidato, pontuado de acordo com o conhecimento do mesmo.”
+
+7.	Se baseando no requisito acima, desenvolva os cadastros básicos da aplicação contemplando as seguintes operações: listagem, criação, alteração e exclusão.
+8.	Utilizando a estrutura elaborada anteriormente, desenvolva a funcionalidade de entrevista descrita na regra de negócio.
+9.	Utilizando a estrutura elaborada anteriormente, desenvolva as funcionalidades contempladas ao final do período de triagem de currículos.
