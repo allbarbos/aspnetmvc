@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{75341F06-49C2-4EC4-A32B-02C86CC391FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{DF73A15E-707A-4473-9960-3B6BBE8DD237}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation", "1 - Presentation", "{6041EBE9-26E5-4340-815F-7A4181723D09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benner.Microondas.Site", "Benner.Microondas.Site\Benner.Microondas.Site.csproj", "{C9675F24-F133-407D-AC14-BA0150B4DDA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benner.Microondas.Application", "Benner.Microondas.Application\Benner.Microondas.Application.csproj", "{5A2F18C7-B47F-445F-8E68-29A1669F0061}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benner.Microondas.Domain", "Benner.Microondas.Domain\Benner.Microondas.Domain.csproj", "{286D3788-8CBD-42A3-A17F-80CCFAF75A3B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9675F24-F133-407D-AC14-BA0150B4DDA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9675F24-F133-407D-AC14-BA0150B4DDA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9675F24-F133-407D-AC14-BA0150B4DDA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9675F24-F133-407D-AC14-BA0150B4DDA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A2F18C7-B47F-445F-8E68-29A1669F0061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A2F18C7-B47F-445F-8E68-29A1669F0061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A2F18C7-B47F-445F-8E68-29A1669F0061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A2F18C7-B47F-445F-8E68-29A1669F0061}.Release|Any CPU.Build.0 = Release|Any CPU
+		{286D3788-8CBD-42A3-A17F-80CCFAF75A3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{286D3788-8CBD-42A3-A17F-80CCFAF75A3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{286D3788-8CBD-42A3-A17F-80CCFAF75A3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{286D3788-8CBD-42A3-A17F-80CCFAF75A3B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C9675F24-F133-407D-AC14-BA0150B4DDA0} = {6041EBE9-26E5-4340-815F-7A4181723D09}
+		{5A2F18C7-B47F-445F-8E68-29A1669F0061} = {DF73A15E-707A-4473-9960-3B6BBE8DD237}
+		{286D3788-8CBD-42A3-A17F-80CCFAF75A3B} = {75341F06-49C2-4EC4-A32B-02C86CC391FE}
+	EndGlobalSection
+EndGlobal
