@@ -4,11 +4,11 @@ namespace Benner.Microondas.Domain.Entities
 {
   public class Microondas
   {
-    public Microondas(TimeSpan tempo)
+    public Microondas(bool inicioRapido, TimeSpan tempo, int potencia = 10)
     {
       Status = string.Empty;
-      Tempo = tempo;
-      Potencia = 10;
+      Tempo = inicioRapido ? TimeSpan.FromSeconds(30) : tempo;
+      Potencia = inicioRapido ? 8 : potencia;
     }
 
     #region props
@@ -25,7 +25,7 @@ namespace Benner.Microondas.Domain.Entities
 
     public void ValidaTempo()
     {
-      if (Tempo == null || Tempo.TotalSeconds == 0)
+      if (Tempo == null || Tempo.TotalSeconds < 1)
         throw new Exception("Tempo Cozimento: É necessário parametrizar antes de iniciar o aquecimento");
 
       if (Tempo.TotalMinutes > 2 || Tempo.TotalSeconds < 1)
@@ -34,14 +34,8 @@ namespace Benner.Microondas.Domain.Entities
 
     public void ValidaPotencia()
     {
-      if (Potencia >= 1 || Potencia <= 10)
+      if (Potencia < 1 || Potencia > 10)
         throw new Exception("Potência: Máxima 10 - Mínima 1");
-    }
-
-    public void InicioRapido()
-    {
-      Tempo = TimeSpan.FromSeconds(30);
-      Potencia = 8;
     }
 
     public void AtualizaStatus()

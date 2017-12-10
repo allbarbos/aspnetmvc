@@ -6,7 +6,7 @@ namespace Benner.Microondas.Site.Models
 {
   public class MicroondasModel
   {
-    public string Status { get; set; }
+    public bool Rapido { get; set; }
 
     [DisplayName("Tempo de Cozimento")]
     [Required(ErrorMessage = "Informe o tempo de cozimento")]

@@ -1,6 +1,9 @@
-﻿namespace Benner.Microondas.Domain.Interfaces
+﻿using System;
+
+namespace Benner.Microondas.Domain.Interfaces
 {
-    public interface IMicroondasApplication
-    {
-    }
+  public interface IMicroondasApplication
+  {
+    string[] Potencias();
+  }
 }
