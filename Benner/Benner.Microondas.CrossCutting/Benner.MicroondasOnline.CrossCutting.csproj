@@ -87,13 +87,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Benner.Microondas.Application\Benner.Microondas.Application.csproj">
+    <ProjectReference Include="..\Benner.Microondas.Application\Benner.MicroondasOnline.Application.csproj">
       <Project>{a19cdb91-3eff-43c2-88e3-268b3bcf6913}</Project>
-      <Name>Benner.Microondas.Application</Name>
+      <Name>Benner.MicroondasOnline.Application</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Benner.Microondas.Domain\Benner.Microondas.Domain.csproj">
+    <ProjectReference Include="..\Benner.Microondas.Domain\Benner.MicroondasOnline.Domain.csproj">
       <Project>{a10b4dcc-3d45-45f2-844e-09fc035ef5a5}</Project>
-      <Name>Benner.Microondas.Domain</Name>
+      <Name>Benner.MicroondasOnline.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

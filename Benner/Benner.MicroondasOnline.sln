@@ -9,15 +9,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Appl
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation", "1 - Presentation", "{6041EBE9-26E5-4340-815F-7A4181723D09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benner.Microondas.Site", "Benner.Microondas.Site\Benner.Microondas.Site.csproj", "{C9675F24-F133-407D-AC14-BA0150B4DDA0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benner.MicroondasOnline.Site", "Benner.Microondas.Site\Benner.MicroondasOnline.Site.csproj", "{C9675F24-F133-407D-AC14-BA0150B4DDA0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Cross-Cutting", "4 - Cross-Cutting", "{39786E80-A373-4051-BC46-A7C890D57C04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benner.Microondas.CrossCutting", "Benner.Microondas.CrossCutting\Benner.Microondas.CrossCutting.csproj", "{FBC98AF8-6506-44FA-8CD2-F45E5AC2F296}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benner.MicroondasOnline.CrossCutting", "Benner.Microondas.CrossCutting\Benner.MicroondasOnline.CrossCutting.csproj", "{FBC98AF8-6506-44FA-8CD2-F45E5AC2F296}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benner.Microondas.Domain", "Benner.Microondas.Domain\Benner.Microondas.Domain.csproj", "{A10B4DCC-3D45-45F2-844E-09FC035EF5A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benner.MicroondasOnline.Domain", "Benner.Microondas.Domain\Benner.MicroondasOnline.Domain.csproj", "{A10B4DCC-3D45-45F2-844E-09FC035EF5A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benner.Microondas.Application", "Benner.Microondas.Application\Benner.Microondas.Application.csproj", "{A19CDB91-3EFF-43C2-88E3-268B3BCF6913}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benner.MicroondasOnline.Application", "Benner.Microondas.Application\Benner.MicroondasOnline.Application.csproj", "{A19CDB91-3EFF-43C2-88E3-268B3BCF6913}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

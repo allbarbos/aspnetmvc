@@ -141,13 +141,13 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Benner.Microondas.CrossCutting\Benner.Microondas.CrossCutting.csproj">
+    <ProjectReference Include="..\Benner.Microondas.CrossCutting\Benner.MicroondasOnline.CrossCutting.csproj">
       <Project>{fbc98af8-6506-44fa-8cd2-f45e5ac2f296}</Project>
-      <Name>Benner.Microondas.CrossCutting</Name>
+      <Name>Benner.MicroondasOnline.CrossCutting</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Benner.Microondas.Domain\Benner.Microondas.Domain.csproj">
+    <ProjectReference Include="..\Benner.Microondas.Domain\Benner.MicroondasOnline.Domain.csproj">
       <Project>{a10b4dcc-3d45-45f2-844e-09fc035ef5a5}</Project>
-      <Name>Benner.Microondas.Domain</Name>
+      <Name>Benner.MicroondasOnline.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

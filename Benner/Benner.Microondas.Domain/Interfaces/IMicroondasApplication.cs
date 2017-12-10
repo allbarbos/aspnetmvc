@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Benner.Microondas.Domain.Interfaces
+namespace Benner.MicroondasOnline.Domain.Interfaces
 {
   public interface IMicroondasApplication
   {

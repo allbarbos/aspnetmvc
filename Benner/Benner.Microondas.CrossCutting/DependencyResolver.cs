@@ -1,9 +1,9 @@
-﻿using Benner.Microondas.Application.Application;
-using Benner.Microondas.Domain.Interfaces;
+﻿using Benner.MicroondasOnline.Application.Application;
+using Benner.MicroondasOnline.Domain.Interfaces;
 using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.Mvc;
 
-namespace Benner.Microondas.CrossCutting
+namespace Benner.MicroondasOnline.CrossCutting
 {
   public static class DependencyResolver
   {

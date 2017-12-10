@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Benner.Microondas.Site
+namespace Benner.MicroondasOnline.Site
 {
     public class RouteConfig
     {

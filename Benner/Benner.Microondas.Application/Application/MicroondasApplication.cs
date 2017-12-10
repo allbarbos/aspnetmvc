@@ -1,13 +1,14 @@
 ﻿using System;
-using Benner.Microondas.Domain.Interfaces;
+using Benner.MicroondasOnline.Domain.Interfaces;
+using Benner.MicroondasOnline.Domain.Entities;
 
-namespace Benner.Microondas.Application.Application
+namespace Benner.MicroondasOnline.Application.Application
 {
   public class MicroondasApplication : IMicroondasApplication
   {
     public void Esquenta(bool rapido, TimeSpan tempo, int potencia)
     {
-      var micro = rapido ? new Domain.Entities.Microondas(rapido) : new Domain.Entities.Microondas(tempo, potencia);
+      var micro = rapido ? new Microondas(rapido) : new Microondas(tempo, potencia);
       
     }
 

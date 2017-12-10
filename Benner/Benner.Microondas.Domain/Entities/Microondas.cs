@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Benner.Microondas.Domain.Entities
+namespace Benner.MicroondasOnline.Domain.Entities
 {
   public class Microondas
   {

@@ -71,9 +71,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Benner.Microondas.Domain\Benner.Microondas.Domain.csproj">
+    <ProjectReference Include="..\Benner.Microondas.Domain\Benner.MicroondasOnline.Domain.csproj">
       <Project>{a10b4dcc-3d45-45f2-844e-09fc035ef5a5}</Project>
-      <Name>Benner.Microondas.Domain</Name>
+      <Name>Benner.MicroondasOnline.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

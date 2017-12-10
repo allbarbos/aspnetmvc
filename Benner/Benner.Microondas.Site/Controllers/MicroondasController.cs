@@ -1,8 +1,8 @@
-﻿using Benner.Microondas.Domain.Interfaces;
-using Benner.Microondas.Site.Models;
+﻿using Benner.MicroondasOnline.Domain.Interfaces;
+using Benner.MicroondasOnline.Site.Models;
 using System.Web.Mvc;
 
-namespace Benner.Microondas.Site.Controllers
+namespace Benner.MicroondasOnline.Site.Controllers
 {
   public class MicroondasController : Controller
   {

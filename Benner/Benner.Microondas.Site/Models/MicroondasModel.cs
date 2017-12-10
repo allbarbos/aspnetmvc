@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace Benner.Microondas.Site.Models
+namespace Benner.MicroondasOnline.Site.Models
 {
   public class MicroondasModel
   {
