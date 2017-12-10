@@ -109,6 +109,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\sweetalert2.all.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

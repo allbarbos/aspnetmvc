@@ -13,11 +13,11 @@
 <div class="row col-md-12">
     @using (Html.BeginForm("Esquentar", "Microondas", FormMethod.Post))
     {
-        @Html.TextBoxFor(x => x.Rapido, new { Type = "hidden" })
+        @Html.TextBoxFor(x => x.Rapido, new { Type = "hidden", Value = false })
 
     <div class="form-group">
         @Html.LabelFor(x => x.Tempo, new { Value = "Tempo de Cozimento" })
-        @Html.TextBoxFor(x => x.Tempo, new { Class = "form-control", Type = "time", Step = "2", Autocomplete = "off" })
+        @Html.TextBoxFor(x => x.Tempo, new { Class = "form-control", Type = "time", Step = "1", Autocomplete = "off" })
     </div>
 
     <div class="form-group">
@@ -26,14 +26,13 @@
         @Html.TextBoxFor(x => x.Potencia, new { Class = "form-control", Type = "number", Value = 10, Autocomplete = "off" })
     </div>
 
-    @Html.Raw(HttpUtility.HtmlDecode(Html.ValidationMessage("MicroondasErro").ToString()))
-        if (ViewData.ModelState.Values.Count > 0)
+        if (!ViewData.ModelState.IsValid)
         {
             string msg = string.Join(";  ", ViewData.ModelState.Values.SelectMany(x => x.Errors).Select(x => x.ErrorMessage));
 
         <div class="alert alert-dismissible alert-danger">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <strong>Ooops!</strong><br />@msg
+            <strong>Ooops!</strong><br /> @Html.ValidationSummary()
         </div>
         }
 
@@ -54,24 +53,6 @@
             $('#Rapido').val(true);
         });
 
-        //$('#Iniciar').on('click', function (evt) {
-        //    evt.preventDefault();
-        //    $('#progresso').empty();
-
-        //    var tempo = $('#Tempo').val();
-        //    var potencia = $('#Potencia').val();
-
-        //    $.get('/microondas/aquecimento', { rapido: false, tempo: tempo, potencia: potencia }, function (msg) {
-        //        window.clearInterval(intervalId);
-        //        $('#progresso').html("Aquecido!");
-        //    });
-
-        //    var intervalId = window.setInterval(function () {
-        //        $.getJSON('/microondas/aquecimentoprogress', { id: potencia }, function (json) {
-        //            $('#progresso').append(json.Progress);
-        //        });
-        //    }, 1000);
-        //});
-        
+        $('#progresso').html('@(Model?.Status)');
     </script>
 }

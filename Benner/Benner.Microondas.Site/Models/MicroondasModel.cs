@@ -15,5 +15,7 @@ namespace Benner.MicroondasOnline.Site.Models
     [DisplayName("Potência")]
     [Required(ErrorMessage = "Informe a potência")]
     public int Potencia { get; set; }
+
+    public string Status { get; set; }
   }
 }

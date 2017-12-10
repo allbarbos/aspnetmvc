@@ -4,6 +4,8 @@ namespace Benner.MicroondasOnline.Domain.Entities
 {
   public class Microondas
   {
+    #region ctor
+
     protected Microondas() { }
 
     public Microondas(bool inicioRapido)
@@ -20,6 +22,8 @@ namespace Benner.MicroondasOnline.Domain.Entities
       Potencia = potencia;
     }
 
+    #endregion
+
     #region props
 
     public string Status { get; private set; }
@@ -31,6 +35,11 @@ namespace Benner.MicroondasOnline.Domain.Entities
     #endregion
 
     #region methods
+
+    public string[] Potencias()
+    {
+      return new string[10] { ".", "..", "...", "....", ".....", "......", ".......", "........", ".........", ".........." };
+    }
 
     public void ValidaTempo()
     {
@@ -47,11 +56,19 @@ namespace Benner.MicroondasOnline.Domain.Entities
         throw new Exception("Potência: Máxima 10 - Mínima 1");
     }
 
-    public void AtualizaStatus()
+    public void Esquenta()
     {
-      var potencias = new string[10] { ".", "..", "...", "....", ".....", "......", ".......", "........", ".........", ".........." };
+      for (int i = 0; i < Tempo.TotalSeconds; i++)
+      {
+        var potencias = Potencias();
 
-      Status += potencias[Potencia].Length < 10 ? potencias[Potencia] : " aquecida";
+        Status += potencias[Potencia - 1];
+      }
+
+      Status += " Aquecido!";
+      //var potencias = new string[10] { ".", "..", "...", "....", ".....", "......", ".......", "........", ".........", ".........." };
+
+      //Status += potencias[Potencia].Length < 10 ? potencias[Potencia] : " aquecida";
     }
 
     #endregion

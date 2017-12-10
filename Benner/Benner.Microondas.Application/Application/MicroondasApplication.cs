@@ -6,15 +6,14 @@ namespace Benner.MicroondasOnline.Application.Application
 {
   public class MicroondasApplication : IMicroondasApplication
   {
-    public void Esquenta(bool rapido, TimeSpan tempo, int potencia)
+    public string Esquenta(bool rapido, TimeSpan tempo, int potencia)
     {
-      var micro = rapido ? new Microondas(rapido) : new Microondas(tempo, potencia);
-      
-    }
+      var microondas = rapido ? new Microondas(rapido) : new Microondas(tempo, potencia);
+      microondas.ValidaPotencia();
+      microondas.ValidaTempo();
+      microondas.Esquenta();
 
-    public string[] Potencias()
-    {
-      return new string[10] { ".", "..", "...", "....", ".....", "......", ".......", "........", ".........", ".........." };
+      return microondas.Status;
     }
   }
 }

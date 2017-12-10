@@ -1,5 +1,6 @@
 ﻿using Benner.MicroondasOnline.Domain.Interfaces;
 using Benner.MicroondasOnline.Site.Models;
+using System;
 using System.Web.Mvc;
 
 namespace Benner.MicroondasOnline.Site.Controllers
@@ -18,26 +19,25 @@ namespace Benner.MicroondasOnline.Site.Controllers
       return View();
     }
 
-    //[HttpPost]
+    [HttpPost]
     public ActionResult Esquentar(MicroondasModel model)
     {
-      if (!model.Rapido &&!ModelState.IsValid)
+      if (!model.Rapido && !ModelState.IsValid)
         return View("Index", model);
 
-      // _microondasApplication
+      try
+      {
+        model.Status = _microondasApplication.Esquenta(model.Rapido, model.Tempo, model.Potencia);
+      }
+      catch (Exception e)
+      {
+        ModelState.AddModelError("MicroondasErro", e.Message);
+        return View("Index", model);
+      }
 
-      return View();
+      ModelState.Clear();
+      return View("Index", model);
     }
-
-    public ActionResult EsquentarRapido()
-    {
-      // _microondasApplication
-
-      return View();
-    }
-
-
-
 
 
 
