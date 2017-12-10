@@ -4,11 +4,20 @@ namespace Benner.Microondas.Domain.Entities
 {
   public class Microondas
   {
-    public Microondas(bool inicioRapido, TimeSpan tempo, int potencia = 10)
+    protected Microondas() { }
+
+    public Microondas(bool inicioRapido)
     {
       Status = string.Empty;
-      Tempo = inicioRapido ? TimeSpan.FromSeconds(30) : tempo;
-      Potencia = inicioRapido ? 8 : potencia;
+      Tempo = TimeSpan.FromSeconds(30);
+      Potencia = 8;
+    }
+
+    public Microondas(TimeSpan tempo, int potencia = 10)
+    {
+      Status = string.Empty;
+      Tempo = tempo;
+      Potencia = potencia;
     }
 
     #region props
