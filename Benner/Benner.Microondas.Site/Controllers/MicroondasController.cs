@@ -1,4 +1,4 @@
-﻿using Benner.MicroondasOnline.Domain.Interfaces;
+﻿using Benner.MicroondasOnline.Domain.Interfaces.Application;
 using Benner.MicroondasOnline.Site.Models;
 using System;
 using System.Web.Mvc;
@@ -16,6 +16,8 @@ namespace Benner.MicroondasOnline.Site.Controllers
 
     public ActionResult Index()
     {
+      ViewBag.Programas = _microondasApplication.BuscaProgramas();
+
       return View();
     }
 

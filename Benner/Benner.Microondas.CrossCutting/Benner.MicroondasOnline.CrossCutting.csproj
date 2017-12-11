@@ -95,6 +95,10 @@
       <Project>{a10b4dcc-3d45-45f2-844e-09fc035ef5a5}</Project>
       <Name>Benner.MicroondasOnline.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Benner.MicroondasOnline.Repository\Benner.MicroondasOnline.Repository.csproj">
+      <Project>{ec752261-3a95-4c56-bd04-0c0b320e3355}</Project>
+      <Name>Benner.MicroondasOnline.Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

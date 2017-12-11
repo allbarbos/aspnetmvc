@@ -32,6 +32,8 @@ namespace Benner.MicroondasOnline.Domain.Entities
 
     public int Potencia { get; private set; }
 
+    //public IEnumerable<Programas> ProgramasAquecimento { get; set; }
+
     #endregion
 
     #region methods

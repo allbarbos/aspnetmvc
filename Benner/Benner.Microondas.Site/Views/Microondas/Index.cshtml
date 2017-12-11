@@ -13,7 +13,8 @@
 <div class="row col-md-12">
     @using (Html.BeginForm("Esquentar", "Microondas", FormMethod.Post))
     {
-        @Html.TextBoxFor(x => x.Rapido, new { Type = "hidden", Value = false })
+
+    @Html.TextBoxFor(x => x.Rapido, new { Type = "hidden", Value = false })
 
     <div class="form-group">
         @Html.LabelFor(x => x.Tempo, new { Value = "Tempo de Cozimento" })
