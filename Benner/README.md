@@ -1,3 +1,6 @@
 # Benner
 
-Modelagem em DDD com os patterns Application e Repository, injeção de dependência com Unity, persistência de banco de dados com o micro-ORM Dapper
+* Modelagem em DDD.
+* Application Pattern e Repository Pattern
+* Injeção de dependência com Unity
+* Persistência de dados com o micro-ORM Dapper
