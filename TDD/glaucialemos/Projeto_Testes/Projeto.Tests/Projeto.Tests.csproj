@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CalculadoraTests.cs" />
-    <Compile Include="JuntarNomesTest.cs" />
+    <Compile Include="JuntarNomesTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
